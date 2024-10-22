@@ -5,10 +5,11 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: arima;
     color: rgb(255, 255, 255)
 }
 /* Header - Nav */
+
 
 .header{
     display: flex;
@@ -17,7 +18,6 @@
     background-color: rgb(255, 255, 255);
     min-height: 70px;
     color: rgb(0, 0, 0);
-
 }
 
 .divHeader{
@@ -75,12 +75,14 @@ nav{
 .imagenMain{
     width: 700px;
     height: 350px;
-    border-radius: 7px;
+    border-radius: 60%;
 }
 
 #sobreMi{
     font-size: 2em;
-    padding: 25px;
+    display: flex;
+    justify-content: center;
+    margin: 40px;
 }
 
 .pSobreMi{
@@ -108,8 +110,9 @@ nav{
 #conocimientos{
     font-size: 2em;
     padding: 25px;
-    grid-column: 1/3;
-    grid-row 1;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
 }
 
 .tarjetaHabilidades1{
@@ -133,8 +136,7 @@ nav{
 }
 
 .divTarjeta{
-    border: 3px solid rgb(255, 255, 255);
-    border-radius: 10%;
+    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,7 +145,6 @@ nav{
 
 .imgTarjeta{
     width: 400px;
-    background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* FOOTER */
