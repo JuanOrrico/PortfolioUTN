@@ -19,7 +19,6 @@
     min-height: 70px;
     color: rgb(0, 0, 0);
 }
-
 .divHeader{
     display: flex;
     align-items: center;
@@ -42,6 +41,10 @@
 }
 nav{
     background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    width: 50%;
 }
 .aNav{
     background-color: rgb(255, 255, 255);
@@ -49,6 +52,10 @@ nav{
     padding-right: 25px;
     font-size: 17px;
     color: rgb(0, 0, 0);
+}
+
+.menuNav{
+    display: none;
 }
 
 /* H1 */
@@ -75,7 +82,8 @@ nav{
 .imagenMain{
     width: 700px;
     height: 350px;
-    border-radius: 60%;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 5%;
 }
 
 #sobreMi{
@@ -109,10 +117,8 @@ nav{
 
 #conocimientos{
     font-size: 2em;
-    padding: 25px;
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 1;
-    align-self: center;
 }
 
 .tarjetaHabilidades1{
@@ -165,4 +171,124 @@ nav{
 .aFooter{
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
+}
+
+#hamburguesa{
+    display: none;
+}
+/* MEDIA QUERIES */
+
+@media(max-width:900px){
+
+
+    h1{
+        font-size: 1em;
+        text-align: center;
+        padding: 30px;
+    }
+
+    nav{
+        width: 100%;
+        height: fit-content;
+    }
+    .aNav{
+        display: none;
+        width: 100%;
+        padding: 20px;
+        justify-content: end;
+
+    }
+
+    .menuNav{
+        display: block;
+        background-color: rgb(255, 255, 255);
+    }
+
+    #hamburguesa:checked+.aNav{
+        display: flex;
+    }
+    #hamburguesa:checked+.aNav+.aNav{
+        display: flex;
+    }
+
+    #hamburguesa:checked+.aNav+.aNav+.aNav{
+        display: flex;
+    }
+
+    .pSobreMi{
+        font-size: 1.5em;
+    }
+
+    .presentancionMain{
+        flex-direction: column;
+    }
+
+    .imagenMain{
+        width: 450px;
+        height: 350px;
+        border-radius: 5%;
+    }
+
+    .sectionHabilidades{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .imgTarjeta{
+        width: 300px;
+    }
+
+    .pTarjetas{
+        font-size: 1.5em;
+    }
+
+    .imgFooter{
+        width: 50px;
+        justify-content: space-around;
+    }
+
+}
+
+@media(max-width:500px){
+
+
+    h1{
+        font-size: 1em;
+    }
+
+    .pSobreMi{
+        font-size: 20px;
+    }
+
+    .imagenMain{
+        width: 300px;
+        height: 200px;
+        border-radius: 5%;
+    }
+    .sectionHabilidades{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+
+    .imgTarjeta{
+        width: 100%;
+    }
+
+    .pTarjetas{
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .imgFooter{
+        width: 40px;
+        justify-content: space-around;
+    }
+
+
+
 }
